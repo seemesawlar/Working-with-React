@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Building a construction app with React</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <header></header>
       <main>
         <h1 className={styles.title}>
           <Link href="/posts/about">Element Reno Construction !</Link>
@@ -47,7 +47,8 @@ export default function Home() {
 
       <footer>
         <a href="#" className={styles.footer}>
-          Powered by <strong> Simisola Oyeniyi</strong>
+          <p></p>
+          <p>Powered by Simisola Oyeniyi</p>
         </a>
       </footer>
 
@@ -67,6 +68,8 @@ export default function Home() {
           display: flex;
           justify-content: center;
           align-items: center;
+          background: #e7e0e0;
+          font: #fafafa;
         }
         footer img {
           margin-left: 0.5rem;
