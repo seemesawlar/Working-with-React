@@ -58,7 +58,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://youtube.com"
+                href="https://youtu.be/NNhxmHvZ7Z0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
