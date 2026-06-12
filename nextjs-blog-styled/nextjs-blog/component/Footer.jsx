@@ -26,7 +26,7 @@ export default function Footer() {
               <p>
                 <strong>Phone:</strong>
                 <br />
-                <a href="tel:+17802035158">(780) 203-5158</a>
+                <a href="tel:+17809166652">(780) 916-6652</a>
               </p>
             </div>
           </div>
