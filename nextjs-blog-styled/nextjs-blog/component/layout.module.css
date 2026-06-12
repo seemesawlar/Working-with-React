@@ -1,5 +1,227 @@
-.container{
-    max-width :36rem;
-    padding: 0 1rem;
-    margin: 3rem auto 6rem;
+.siteHeader {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
+.topBar {
+  background: linear-gradient(90deg, #0d1d34 0%, #142a47 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #f8fafc;
+  font-size: 1rem;
+}
+
+.topLeft {
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.topContact {
+  color: #cbd5e1;
+  font-size: 0.96rem;
+}
+
+.topPhone {
+  color: #7dd3fc;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.topSocial {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.topSocial a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(248, 250, 252, 0.18);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.topSocial a:hover {
+  color: #bae6fd;
+  border-color: rgba(186, 230, 253, 0.4);
+}
+
+.navBar {
+  background: linear-gradient(90deg, #0f172a 0%, #102a48 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-right: 3rem;
+}
+
+.brandLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.brandLogo {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 66px;
+  height: 66px;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.brandName {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.brandTag {
+  display: block;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+.nav {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(248, 250, 252, 0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.2s ease;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: #ffffff;
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.actionRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  min-width: 180px;
+  text-align: right;
+  margin-left: auto;
+}
+
+.actionLabel {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.actionPhone {
+  color: #7dd3fc;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pageContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .topInner,
+  .navInner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .topRight {
+    justify-content: flex-start;
+  }
+
+  .navList {
+    justify-content: flex-start;
+  }
+
+  .actionRow {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .topInner {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .navInner {
+    padding: 0.9rem 0.75rem 1rem;
+  }
+
+  .navLink {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.88rem;
+  }
+
+  .brandLogo {
+    width: 52px;
+    height: 52px;
+  }
+}
+

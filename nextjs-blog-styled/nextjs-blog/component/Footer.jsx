@@ -16,17 +16,16 @@ export default function Footer() {
           <div className={styles.section}>
             <h4 className={styles.sectionTitle}>Contact Us</h4>
             <div className={styles.contactInfo}>
-              <p>
+              <p className={styles.address}>
                 <strong>Address:</strong>
-                <br />
-                783 Eagleson Cr NW
-                <br />
-                Edmonton, AB T6M 0V2
+                <span className={styles.addressLine}>783 Eagleson Cr NW</span>
+                <span className={styles.addressLine}>Edmonton, AB T6M 0V2</span>
               </p>
-              <p>
+              <p className={styles.phone}>
                 <strong>Phone:</strong>
-                <br />
-                <a href="tel:+17809166652">(780) 916-6652</a>
+                <span className={styles.phoneNumber}>
+                  <a href="tel:+17809166652">(780) 916-6652</a>
+                </span>
               </p>
             </div>
           </div>

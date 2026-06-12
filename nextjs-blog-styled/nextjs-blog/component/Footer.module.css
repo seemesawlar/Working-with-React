@@ -1,20 +1,20 @@
 .footer {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  color: #ffffff;
-  padding: 3rem 0 1rem;
+  background: linear-gradient(180deg, #0f172a 0%, #111f3a 100%);
+  color: #e2e8f0;
+  padding: 3rem 0 1.25rem;
   margin-top: 5rem;
-  border-top: 4px solid #0070f3;
+  border-top: 4px solid #1d4ed8;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -22,56 +22,69 @@
 .section {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #0070f3;
-  margin: 0 0 0.5rem 0;
-  letter-spacing: 1px;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.4px;
 }
 
 .tagline {
-  font-size: 0.95rem;
-  color: #aaaaaa;
+  font-size: 1rem;
+  color: #cbd5e1;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .sectionTitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0 0 1rem 0;
-  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.8rem 0;
+  color: #f8fafc;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.08em;
 }
 
 .contactInfo {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #cccccc;
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: #cbd5e1;
 }
 
 .contactInfo p {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .contactInfo strong {
-  color: #0070f3;
+  color: #93c5fd;
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.addressLine {
+  display: block;
+  margin-top: 0.15rem;
+  color: #cbd5e1;
+}
+
+.phoneNumber {
+  display: inline-block;
+  margin-left: 0.4rem;
+  color: #7dd3fc;
 }
 
 .contactInfo a {
-  color: #0070f3;
+  color: #7dd3fc;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 
 .contactInfo a:hover {
-  color: #0090ff;
+  color: #38bdf8;
 }
 
 .socialLinks {
@@ -84,21 +97,21 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 112, 243, 0.1);
+  width: 44px;
+  height: 44px;
+  background-color: rgba(59, 130, 246, 0.12);
   border-radius: 50%;
-  color: #0070f3;
+  color: #7dd3fc;
   transition: all 0.3s ease;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 }
 
 .socialIcon:hover {
-  background-color: #0070f3;
+  background-color: #3b82f6;
   color: #ffffff;
-  transform: translateY(-4px);
-  border-color: #0070f3;
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.4);
 }
 
 .socialIcon svg {
@@ -107,15 +120,15 @@
 }
 
 .bottomBar {
-  border-top: 1px solid #444444;
-  padding-top: 2rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.12);
+  padding-top: 1.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  color: #888888;
-  font-size: 0.9rem;
+  color: #94a3b8;
+  font-size: 0.93rem;
 }
 
 .bottomBar p {
@@ -129,56 +142,49 @@
 }
 
 .links a {
-  color: #0070f3;
+  color: #7dd3fc;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 
 .links a:hover {
-  color: #0090ff;
+  color: #38bdf8;
   text-decoration: underline;
 }
 
 .links span {
-  color: #666666;
+  color: #64748b;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer {
-    padding: 2rem 0 1rem;
-    margin-top: 3rem;
-  }
-
+@media (max-width: 900px) {
   .content {
     gap: 1.5rem;
   }
 
   .bottomBar {
-    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    justify-content: center;
-  }
-
-  .links {
-    justify-content: center;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .footer {
+    padding: 2.25rem 0 0.75rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
   .logo {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .sectionTitle {
-    font-size: 0.95rem;
-  }
-
-  .socialLinks {
-    justify-content: center;
+    font-size: 1rem;
   }
 
   .contactInfo {
-    font-size: 0.85rem;
+    font-size: 0.92rem;
   }
 }
