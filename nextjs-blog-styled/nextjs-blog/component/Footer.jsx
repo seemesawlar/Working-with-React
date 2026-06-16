@@ -8,8 +8,9 @@ export default function Footer() {
         <div className={styles.content}>
           {/* Company Info */}
           <div className={styles.section}>
-            <h3 className={styles.logo}>Element Reno</h3>
-            <p className={styles.tagline}>Complete Solutions for Every Home</p>
+            <Link href="/" className={styles.logoLink}>
+              <img src="/images/Element Reno Logo.png" alt="Element Reno logo" className={styles.logoImage} />
+            </Link>
           </div>
 
           {/* Contact Info */}

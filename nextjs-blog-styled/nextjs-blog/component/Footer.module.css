@@ -25,18 +25,29 @@
   gap: 1rem;
 }
 
-.logo {
-  font-size: 1.9rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin: 0;
-  letter-spacing: 0.4px;
+.logoLink {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  width: fit-content;
+}
+
+.logoLink:hover {
+  transform: scale(1.05);
+}
+
+.logoImage {
+  height: auto;
+  width: 180px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .tagline {
   font-size: 1rem;
   color: #cbd5e1;
-  margin: 0;
+  margin: 0.75rem 0 0 0;
   line-height: 1.7;
 }
 
@@ -176,8 +187,8 @@
     padding: 0 1rem;
   }
 
-  .logo {
-    font-size: 1.6rem;
+  .logoImage {
+    width: 130px;
   }
 
   .sectionTitle {

@@ -39,11 +39,7 @@ export default function Layout({ children, home }) {
           <div className={styles.navInner}>
             <div className={styles.brandRow}>
               <Link href="/" className={styles.brandLink}>
-                <img src="/images/nextphoto1.jpg" alt="Element Reno logo" className={styles.brandLogo} width={56} height={56} />
-                <div className={styles.brandTextBlock}>
-                  <span className={styles.brandName}>Element Reno</span>
-                  <span className={styles.brandTag}>Construction & Renovation</span>
-                </div>
+                <img src="/images/Element Reno Logo.png" alt="Element Reno logo" className={styles.brandLogo} />
               </Link>
             </div>
 
