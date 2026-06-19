@@ -1,0 +1,118 @@
+/* Careers.module.css — supplementary styles for the Careers page */
+
+/* ── Status banner ── */
+.statusBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #dce4f0;
+  border-left: 4px solid #c9922a;
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  max-width: 720px;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c9922a;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.statusTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0c1b33;
+  margin-bottom: 0.4rem;
+}
+
+.statusBody {
+  font-size: 0.93rem;
+  color: #4a596c;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Role types grid ── */
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.roleCard {
+  background: #fff;
+  border: 1px solid #dce4f0;
+  border-radius: 10px;
+  padding: 1.5rem 1.6rem;
+  border-left: 3px solid #0f2d5e;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.roleCard:hover {
+  box-shadow: 0 8px 28px rgba(13,45,94,0.1);
+  transform: translateY(-2px);
+}
+
+.roleTitle {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #0c1b33;
+  margin-bottom: 0.45rem;
+}
+
+.roleDesc {
+  font-size: 0.88rem;
+  color: #4a596c;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Stay in touch card ── */
+.touchCard {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #dce4f0;
+  border-radius: 14px;
+  padding: 2.5rem;
+}
+
+.touchActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.touchPhone {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f2d5e;
+  text-decoration: none;
+  border-bottom: 2px solid #c9922a;
+  padding-bottom: 2px;
+  transition: color 0.18s;
+}
+.touchPhone:hover { color: #163d7e; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .roleGrid  { grid-template-columns: 1fr; }
+  .touchCard { grid-template-columns: 1fr; gap: 1.75rem; padding: 2rem; }
+  .touchActions { align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .statusBanner { padding: 1.25rem 1.4rem; flex-direction: column; }
+  .statusDot { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roleCard:hover { transform: none; }
+}
