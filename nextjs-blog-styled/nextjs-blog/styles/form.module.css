@@ -1,61 +1,264 @@
+/* form.module.css — Basement Development quote form
+   Matches Element Reno brand: navy #0f2d5e, gold #c9922a */
+
 .container {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
+.heading {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+  color: #0c1b33;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.015em;
+}
+
+.subheading {
+  font-size: 0.97rem;
+  color: #4a596c;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+/* ── Form layout ── */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.3rem;
 }
 
 .row {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem;
 }
 
-.input {
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.labelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: #1a2940;
+}
+
+.required {
+  color: #c9922a;
+}
+
+.charCount {
+  font-size: 0.78rem;
+  color: #9aa7b8;
+}
+
+/* ── Inputs ── */
+.input,
+.textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 0.78rem 1rem;
+  border: 1.5px solid #c5d3e5;
+  border-radius: 7px;
+  font-size: 0.96rem;
+  font-family: inherit;
+  color: #1a2940;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #0f2d5e;
+  box-shadow: 0 0 0 3px rgba(15, 45, 94, 0.08);
 }
 
 .textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  min-height: 100px;
-  resize: none;
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.6;
 }
 
-.button {
-  background: #1a73e8;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+.input[type="text"],
+.input[type="email"],
+.input[type="tel"] {
+  appearance: none;
+}
+
+select.input {
   cursor: pointer;
 }
 
-.button:hover {
-  background: #1557b0;
+/* ── Field-level error styling ── */
+.inputError {
+  border-color: #dc2626;
+}
+.inputError:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.fieldError {
+  font-size: 0.82rem;
+  color: #dc2626;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.fieldError::before {
+  content: "⚠";
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+/* ── Form-level error banner ── */
+.formError {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-left: 4px solid #dc2626;
+  border-radius: 7px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.9rem;
+  color: #991b1b;
+  line-height: 1.6;
+}
+.formError a {
+  color: #991b1b;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ── Checkbox ── */
+.checkboxRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: #4a596c;
+  line-height: 1.55;
+  cursor: pointer;
 }
 
 .checkbox {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #0f2d5e;
+  cursor: pointer;
 }
-.error {
-  background-color: #ffe0e0;
-  color: #b00020;
-  padding: 12px;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  border: 1px solid #ffb3b3;
+
+.checkboxRow a {
+  color: #c9922a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.checkboxRow a:hover {
+  text-decoration: underline;
+}
+
+/* ── Submit button ── */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.95rem;
+  margin-top: 0.4rem;
+  background: #0f2d5e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 2px solid #0f2d5e;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.18s, transform 0.15s;
+}
+.button:hover:not(:disabled) {
+  background: #163d7e;
+  border-color: #163d7e;
+  transform: translateY(-1px);
+}
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sendingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Success state ── */
+.successBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #eaf6f0;
+  border: 1px solid #86d3b0;
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+
+.successIcon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+  color: #175c3a;
+  margin-top: 2px;
+}
+
+.successTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #175c3a;
+  margin-bottom: 0.4rem;
+}
+
+.successBody {
+  font-size: 0.93rem;
+  color: #2a7a52;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .row { grid-template-columns: 1fr; gap: 1.3rem; }
+  .container { padding: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; }
+  .button:hover:not(:disabled) { transform: none; }
 }
