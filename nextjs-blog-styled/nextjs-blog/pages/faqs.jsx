@@ -9,11 +9,11 @@ const categories = [
     faqs: [
       {
         q: "How do I get a quote?",
-        a: "Call us at (780) 916-6652 or fill out the contact form on our website. We'll schedule a free, no-obligation on-site consultation — usually within a few days — and provide a detailed written estimate shortly after.",
+        a: "Call us at (780) 916-6652, send us an email at info@elementreno.ca, or fill out the contact form on our website. We'll schedule a free, no-obligation on-site consultation, usually within a few days, and provide a detailed written estimate shortly after.",
       },
       {
         q: "Are your estimates really free?",
-        a: "Yes, completely free and no-obligation. We visit your home, assess the scope, and provide a detailed written quote. You decide if you want to move forward — no pressure.",
+        a: "Yes, completely free and no-obligation. We visit your home, assess the scope, and provide a detailed written quote. You decide if you want to move forward, no pressure.",
       },
     {
   q: "How far in advance should I book?",
@@ -51,7 +51,7 @@ const categories = [
     faqs: [
       {
         q: "What's the difference between wood and composite decking?",
-        a: "Wood (cedar or pressure-treated) is lower upfront cost and has a traditional look, but requires regular maintenance — staining every 2–3 years. Composite costs more initially but is virtually maintenance-free and resists fading and rot. We can help you weigh the tradeoffs for your situation.",
+        a: "Wood (cedar or pressure-treated) is lower upfront cost and has a traditional look, but requires regular maintenance, staining every 2–3 years. Composite costs more initially but is virtually maintenance-free and resists fading and rot. We can help you weigh the tradeoffs for your situation.",
       },
       {
         q: "Do I need a permit for a deck?",
@@ -106,7 +106,7 @@ function FaqItem({ q, a }) {
 export default function Faqs() {
   return (
     <>
-      <Head><title>FAQs | Element Reno — Edmonton Renovation Specialists</title></Head>
+      <Head><title>FAQs | Element Reno: Edmonton Renovation Specialists</title></Head>
 
       <div className={styles.pageHero}>
         <div className={styles.pageHeroInner}>
@@ -118,7 +118,7 @@ export default function Faqs() {
 
       <section className={styles.section}>
         <div className={styles.faqIntro}>
-          <p className={styles.body}>Can't find the answer you're looking for? Call us directly at <a href="tel:+17809166652" className={styles.inlineLink}>(780) 916-6652</a> or <Link href="/contact" className={styles.inlineLink}>send us a message</Link> — we're happy to answer any question about your project.</p>
+          <p className={styles.body}>Can't find the answer you're looking for? Call us directly at <a href="tel:+17809166652" className={styles.inlineLink}>(780) 916-6652</a> or <Link href="/contact" className={styles.inlineLink}>send us a message</Link>, we're happy to answer any question about your project.</p>
         </div>
 
         {categories.map(cat => (

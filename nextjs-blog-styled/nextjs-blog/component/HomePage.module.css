@@ -408,6 +408,20 @@
 }
 .ctaPhone:hover { border-color: #fff; }
 
+.ctaEmail {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  padding-bottom: 2px;
+  transition: border-color 0.18s;
+}
+
+.ctaEmail:hover {
+  border-color: #fff;
+}
+
 /* ════════════════
    CONTACT SECTION
 ════════════════ */

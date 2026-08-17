@@ -64,13 +64,13 @@ const process = [
 export default function Services() {
   return (
     <>
-      <Head><title>Our Services | Element Reno — Basement, Deck & Renovation Specialists</title></Head>
+      <Head><title>Our Services | Element Reno : Basement, Deck & Renovation Specialists</title></Head>
 
       <div className={styles.pageHero}>
         <div className={styles.pageHeroInner}>
           <p className={styles.breadcrumb}><Link href="/">Home</Link> / Our Services</p>
           <h1 className={styles.pageTitle}>Our Services</h1>
-          <p className={styles.pageSubtitle}>Basements, decks, and full-home renovations — done right the first time.</p>
+          <p className={styles.pageSubtitle}>Basements, decks, and full-home renovations, done right the first time.</p>
         </div>
       </div>
 
@@ -130,10 +130,11 @@ export default function Services() {
 
       <div className={styles.ctaStrip}>
         <h2 className={styles.ctaH}>Not sure which service you need?</h2>
-        <p className={styles.ctaP}>Call us or book a free consultation — we'll help you figure out the best plan for your home and budget.</p>
+        <p className={styles.ctaP}>Call us or book a free consultation, we'll help you figure out the best plan for your home and budget.</p>
         <div className={styles.ctaRow}>
           <Link href="/contact" className={styles.btnPrimary}>Book a Free Consultation</Link>
           <a href="tel:+17809166652" className={styles.ctaPhone}>(780) 916-6652</a>
+          <a href="mailto:info@elementreno.ca" className={styles.ctaEmail}>info@elementreno.ca</a>
         </div>
       </div>
     </>

@@ -2,7 +2,7 @@ import styles from "./layout.module.css";
 import Head from "next/head";
 import Link from "next/link";
 
-export const siteTitle = "Element Reno — Complete Solutions for Every Home";
+export const siteTitle = "Element Reno: Complete Solutions for Every Home";
 
 export default function Layout({ children, fullBleed = false }) {
   return (
@@ -24,6 +24,7 @@ export default function Layout({ children, fullBleed = false }) {
             <div className={styles.topRight}>
               <span className={styles.topContact}>Questions? Call us:</span>
               <a href="tel:+17809166652" className={styles.topPhone}>+1 780-916-6652</a>
+                <a href="mailto:info@elementreno.ca" className={styles.topEmail}>info@elementreno.ca</a>
               <div className={styles.topSocial}>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
                 <a href="https://youtu.be/NNhxmHvZ7Z0" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -52,6 +53,7 @@ export default function Layout({ children, fullBleed = false }) {
             <div className={styles.actionRow}>
               <span className={styles.actionLabel}>Ready to discuss your project?</span>
               <a href="tel:+17809166652" className={styles.actionPhone}>+1 780-916-6652</a>
+                <a href="mailto:info@elementreno.ca" className={styles.actionEmail}>info@elementreno.ca</a>
             </div>
           </div>
         </div>

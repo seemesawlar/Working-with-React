@@ -47,7 +47,7 @@ function validatePhone(value) {
   const digitsOnly = value.replace(/\D/g, "");
   if (!digitsOnly) return "Phone number is required.";
   if (digitsOnly.length < 10) return "Phone number must be at least 10 digits.";
-  if (digitsOnly.length > 11) return "Phone number looks too long — please check it.";
+  if (digitsOnly.length > 11) return "Phone number looks too long, please check it.";
   return "";
 }
 
@@ -277,7 +277,7 @@ export default function BasementForm() {
             name="description"
             rows={5}
             maxLength={1500}
-            placeholder="Tell us about your space — square footage, what you'd like included (bathroom, wet bar, home gym, etc.), and your ideal timeline."
+            placeholder="Tell us about your space: square footage, what you'd like included (bathroom, wet bar, home gym, etc.), and your ideal timeline."
             value={form.description}
             onChange={handleChange}
             onBlur={handleBlur}

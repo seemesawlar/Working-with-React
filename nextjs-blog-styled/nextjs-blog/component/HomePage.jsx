@@ -8,7 +8,7 @@ const heroSlides = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
     eyebrow: "Edmonton's Renovation Specialists",
     headline: "Complete Solutions\nfor Every Home",
-    sub: "Basement development, custom decks, and full-home renovations — built to last in Edmonton's climate.",
+    sub: "Basement development, custom decks, and full-home renovations, built to last in Edmonton's climate.",
   },
   {
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80",
@@ -20,7 +20,7 @@ const heroSlides = [
     image: "https://images.unsplash.com/photo-1591972863054-cb79fcf96a04?w=1600&q=80",
     eyebrow: "Custom Deck Building",
     headline: "Outdoor Living\nBuilt to Impress",
-    sub: "Wood, composite, multi-level — designed for your lifestyle and engineered for Edmonton winters.",
+    sub: "Wood, composite, multi-level, designed for your lifestyle and engineered for Edmonton winters.",
   },
 ];
 
@@ -34,7 +34,7 @@ const stats = [
 const services = [
   {
     title: "Basement Development",
-    desc:  "Full basement finishing, entertainment rooms, guest suites, home gyms, wet bars — we handle framing, insulation, flooring, and everything in between.",
+    desc:  "Full basement finishing, entertainment rooms, guest suites, home gyms, wet bars, we handle framing, insulation, flooring, and everything in between.",
     href:  "/services",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -45,7 +45,7 @@ const services = [
   },
   {
     title: "Deck Building",
-    desc:  "Wood and composite decks, multi-level and wraparound designs, pergolas, built-in seating, and outdoor lighting — built for Edmonton summers and winters.",
+    desc:  "Wood and composite decks, multi-level and wraparound designs, pergolas, built-in seating, and outdoor lighting, built for Edmonton summers and winters.",
     href:  "/services",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -56,7 +56,7 @@ const services = [
   },
   {
     title: "Full-Home Renovations",
-    desc:  "Kitchen and bathroom updates, exterior upgrades, siding, interior remodelling — complete renovation support with project planning and permit assistance.",
+    desc:  "Kitchen and bathroom updates, exterior upgrades, siding, interior remodelling, complete renovation support with project planning and permit assistance.",
     href:  "/services",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -69,7 +69,7 @@ const services = [
 
 const whyUs = [
   { icon: "🏅", title: "Basement & deck specialists",   desc: "Deep expertise in the two renovations that add the most value to Edmonton homes." },
-  { icon: "📋", title: "Dedicated project management",  desc: "One point of contact from first consultation through final walkthrough — no hand-offs." },
+  { icon: "📋", title: "Dedicated project management",  desc: "One point of contact from first consultation through final walkthrough, no hand-offs." },
   { icon: "🔩", title: "Quality materials, clean sites", desc: "Precise installation, premium products, and a job site your neighbours won't complain about." },
   { icon: "💬", title: "Transparent pricing",            desc: "Detailed written estimates, no surprise invoices, and scheduling you can count on." },
 ];
@@ -85,7 +85,7 @@ const gallery = [
 const testimonials = [
   { name: "Karen T.",       location: "West Edmonton", quote: "Element Reno turned our cold, unfinished basement into a proper family room. The team was on time, communicated every step, and the result exceeded what we imagined. Would recommend without hesitation." },
   { name: "Mark & Lisa P.", location: "Windermere",   quote: "We had a two-level deck built and it completely changed how we use our backyard. Solid craftsmanship, fair price, and they cleaned up like they were never there. Already planning our next project." },
-  { name: "Raj S.",         location: "Summerside",   quote: "From the first call to the final walkthrough, everything was professional and transparent. No surprises on the invoice, no delays — just a beautiful finished basement delivered on time." },
+  { name: "Raj S.",         location: "Summerside",   quote: "From the first call to the final walkthrough, everything was professional and transparent. No surprises on the invoice, no delays, just a beautiful finished basement delivered on time." },
   { name: "Diane F.",       location: "Glenora",      quote: "The kitchen renovation came out beautifully. They handled permits, stayed within budget, and kept me informed daily. It's rare to find a contractor that actually does what they say." },
 ];
 
@@ -225,8 +225,8 @@ export default function HomePage() {
       {/* ── GALLERY (light bg, constrained inner) ── */}
       <section className={styles.lightSection} aria-labelledby="gal-title">
         <div className={styles.wrap}>
-          <p className={styles.eyebrow}>Our Work</p>
-          <h2 id="gal-title" className={styles.h2}>Recent projects</h2>
+          <p className={styles.eyebrow}>Explore Possibilities</p>
+          <h2 id="gal-title" className={styles.h2}>See what's possible for your home</h2>
           <div className={styles.galGrid}>
             {gallery.map((img, i) => (
               <div key={i} className={`${styles.galItem} ${img.span ? styles.galSpan : ""}`}>
@@ -235,7 +235,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className={styles.galCta}>
-            <Link href="/services" className={styles.btnPrimary}>See all projects</Link>
+            <Link href="/services" className={styles.btnPrimary}>Start Your Project</Link>
           </div>
         </div>
       </section>
@@ -275,6 +275,7 @@ export default function HomePage() {
           <div className={styles.ctaRow}>
             <Link href="/contact" className={styles.btnNavyDark}>Book a Free Consultation</Link>
             <a href="tel:+17809166652" className={styles.ctaPhone}>(780) 916-6652</a>
+              <a href="mailto:info@elementreno.ca" className={styles.ctaEmail}>info@elementreno.ca</a>
           </div>
         </div>
       </section>
@@ -286,7 +287,7 @@ export default function HomePage() {
             <div>
               <p className={styles.eyebrow}>Service Area</p>
               <h2 id="contact-title" className={styles.h2}>Serving Edmonton &amp; surrounding areas</h2>
-              <p className={styles.contactDesc}>We work throughout Edmonton and the greater Capital Region — including St. Albert, Sherwood Park, Spruce Grove, Leduc, and beyond.</p>
+              <p className={styles.contactDesc}>We work throughout Edmonton and the greater Capital Region, including St. Albert, Sherwood Park, Spruce Grove, Leduc, and beyond.</p>
               <div className={styles.mapWrap}>
                 <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=700&q=70"
                   alt="Aerial view of Edmonton" className={styles.mapImg} loading="lazy" />
@@ -310,7 +311,7 @@ export default function HomePage() {
                     placeholder="(780) 555-0100" value={form.phone} onChange={handleChange} required />
                   <label htmlFor="hp-msg" className={styles.lbl}>What are you working on?</label>
                   <textarea id="hp-msg" name="message" className={styles.txa} rows={4}
-                    placeholder="Describe your project — basement finish, deck build, renovation, etc."
+                    placeholder="Describe your project: basement finish, deck build, renovation, etc."
                     value={form.message} onChange={handleChange} required />
                   <button type="submit" className={styles.btnBlock}>Send Message</button>
                 </form>

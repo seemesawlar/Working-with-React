@@ -4,7 +4,7 @@ import styles from "../styles/InnerPage.module.css";
 import aStyles from "../styles/About.module.css";
 
 const values = [
-  { icon: "🤝", title: "Honest communication",  desc: "We tell you what's realistic, what it costs, and when it'll be done — before we start." },
+  { icon: "🤝", title: "Honest communication",  desc: "We tell you what's realistic, what it costs, and when it'll be done, before we start." },
   { icon: "🔨", title: "Craftsmanship first",   desc: "We don't cut corners. Every nail, seam, and finish is done right the first time." },
   { icon: "🏠", title: "Edmonton expertise",    desc: "We build for this climate, these code requirements, and these homeowners." },
   { icon: "♻️", title: "Clean & responsible",   desc: "We leave your property better than we found it and dispose of waste responsibly." },
@@ -46,20 +46,20 @@ const commitments = [
   {
     icon: "🛡️",
     title: "Workmanship warranty",
-    desc: "We stand behind what we build. All projects come with a written workmanship warranty — details outlined in your contract.",
+    desc: "We stand behind what we build. All projects come with a written workmanship warranty, details outlined in your contract.",
   },
 ];
 
 const milestones = [
   { year: "Founded", note: "Element Reno established in Edmonton with a focus on basement development and deck building" },
-  { year: "50+",     note: "Projects completed milestone reached — growing entirely through referrals and repeat clients" },
+  { year: "50+",     note: "Projects completed milestone reached, growing entirely through referrals and repeat clients" },
   { year: "Today",   note: "100+ completed projects, serving Edmonton and the greater Capital Region with a full renovation offering" },
 ];
 
 export default function About() {
   return (
     <>
-      <Head><title>About Us | Element Reno — Edmonton Renovation Specialists</title></Head>
+      <Head><title>About Us | Element Reno: Edmonton Renovation Specialists</title></Head>
 
       {/* Page hero */}
       <div className={styles.pageHero}>
@@ -77,7 +77,7 @@ export default function About() {
             <p className={styles.eyebrow}>Our Story</p>
             <h2 className={styles.h2}>Homeowner-focused from day one</h2>
             <p className={styles.body}>Element Reno was founded with a simple idea: renovation shouldn't be stressful. Too many homeowners had been burned by missed deadlines, surprise invoices, and crews who disappeared mid-project. We set out to be the renovation company we wished existed.</p>
-            <p className={styles.body}>We started with basement finishing and deck building — the two projects that reliably increase home value and quality of life in Edmonton. Over time we expanded to full-home renovations, always keeping the same commitment: one dedicated project manager, transparent pricing, and work we'd be proud to put our name on.</p>
+            <p className={styles.body}>We started with basement finishing and deck building, the two projects that reliably increase home value and quality of life in Edmonton. Over time we expanded to full-home renovations, always keeping the same commitment: one dedicated project manager, transparent pricing, and work we'd be proud to put our name on.</p>
             <p className={styles.body}>Today, Element Reno has completed over 100 projects across Edmonton and the Capital Region, and most of our new clients come from referrals. That's the metric we care about most.</p>
           </div>
           <div>
@@ -125,7 +125,7 @@ export default function About() {
       <section className={styles.section}>
         <p className={styles.eyebrow}>Our Commitments</p>
         <h2 className={styles.h2}>What every Element Reno client can expect</h2>
-        <p className={styles.lead}>These aren't aspirations — they're the standard we hold ourselves to on every single project.</p>
+        <p className={styles.lead}>These aren't aspirations: they're the standard we hold ourselves to on every single project.</p>
         <div className={aStyles.commitGrid}>
           {commitments.map(c => (
             <div key={c.title} className={aStyles.commitCard}>
@@ -166,6 +166,7 @@ export default function About() {
         <div className={styles.ctaRow}>
           <Link href="/contact" className={styles.btnPrimary}>Get a Free Estimate</Link>
           <a href="tel:+17809166652" className={styles.ctaPhone}>(780) 916-6652</a>
+        <a href="mailto:info@elementreno.ca" className={styles.ctaEmail}>info@elementreno.ca</a>
         </div>
       </div>
     </>

@@ -4,9 +4,9 @@ import styles from "../styles/InnerPage.module.css";
 import cStyles from "../styles/Careers.module.css";
 
 const whyJoin = [
-  { icon: "🔨", title: "Real craftsmanship",      desc: "Work on basements, decks, and full renovations where quality is non-negotiable — not cookie-cutter jobs." },
+  { icon: "🔨", title: "Real craftsmanship",      desc: "Work on basements, decks, and full renovations where quality is non-negotiable, not cookie-cutter jobs." },
   { icon: "📋", title: "Clear project structure",  desc: "Every job has a dedicated project manager and a real plan. No chaos, no guessing what's next." },
-  { icon: "🤝", title: "Respectful culture",       desc: "We treat our crews the way we treat our clients — with honesty, fair pay, and clear communication." },
+  { icon: "🤝", title: "Respectful culture",       desc: "We treat our crews the way we treat our clients, with honesty, fair pay, and clear communication." },
   { icon: "📈", title: "Room to grow",             desc: "As Element Reno grows across the Capital Region, so do the opportunities for the people who help build it." },
 ];
 
@@ -20,13 +20,13 @@ const roleTypes = [
 export default function Careers() {
   return (
     <>
-      <Head><title>Careers | Element Reno — Edmonton Renovation Specialists</title></Head>
+      <Head><title>Careers | Element Reno: Edmonton Renovation Specialists</title></Head>
 
       <div className={styles.pageHero}>
         <div className={styles.pageHeroInner}>
           <p className={styles.breadcrumb}><Link href="/">Home</Link> / Careers</p>
           <h1 className={styles.pageTitle}>Careers at Element Reno</h1>
-          <p className={styles.pageSubtitle}>We're not hiring right now — but we're always looking to meet good people for when we are.</p>
+          <p className={styles.pageSubtitle}>We're not hiring right now, but we're always looking to meet good people for when we are.</p>
         </div>
       </div>
 
@@ -36,7 +36,7 @@ export default function Careers() {
           <span className={cStyles.statusDot} aria-hidden="true" />
           <div>
             <p className={cStyles.statusTitle}>No current openings</p>
-            <p className={cStyles.statusBody}>We don't have any active positions posted at the moment. When we do, they'll appear right here — along with the role, requirements, and how to apply.</p>
+            <p className={cStyles.statusBody}>We don't have any active positions posted at the moment. When we do, they'll appear right here, along with the role, requirements, and how to apply.</p>
           </div>
         </div>
       </section>
@@ -80,9 +80,10 @@ export default function Careers() {
             <p className={styles.body}>Send us your name, the type of role you're interested in, and a brief note about your experience. We keep a list of strong candidates and reach out directly when a matching position opens.</p>
           </div>
           <div className={cStyles.touchActions}>
-            <a href="mailto:simisola.dev@gmail.com?subject=Careers%20Interest%20—%20Element%20Reno" className={styles.btnPrimary}>
+            <a href="mailto:info@elementreno.ca?subject=Careers%20Interest%20—%20Element%20Reno" className={styles.btnPrimary}>
               Email Your Interest
             </a>
+          
             <a href="tel:+17809166652" className={cStyles.touchPhone}>(780) 916-6652</a>
           </div>
         </div>
@@ -95,6 +96,7 @@ export default function Careers() {
         <div className={styles.ctaRow}>
           <Link href="/contact" className={styles.btnPrimary}>Get a Free Estimate</Link>
           <a href="tel:+17809166652" className={styles.ctaPhone}>(780) 916-6652</a>
+          <a href="mailto:info@elementreno.ca" className={styles.ctaEmail}>info@elementreno.ca</a>
         </div>
       </div>
     </>

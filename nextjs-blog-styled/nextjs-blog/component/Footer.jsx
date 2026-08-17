@@ -28,6 +28,12 @@ export default function Footer() {
                   <a href="tel:+17809166652">(780) 916-6652</a>
                 </span>
               </p>
+              <p className={styles.email}>
+                <strong>Email:</strong>
+                <span className={styles.emailAddress}>
+                  <a href="mailto:info@elementreno.ca">info@elementreno.ca</a>
+                </span>
+              </p>
             </div>
           </div>
 

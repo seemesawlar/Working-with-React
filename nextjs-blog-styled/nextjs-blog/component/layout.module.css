@@ -37,7 +37,8 @@
   font-size: 0.96rem;
 }
 
-.topPhone {
+.topPhone,
+.topEmail {
   color: #7dd3fc;
   font-weight: 700;
   text-decoration: none;
@@ -160,7 +161,8 @@
   color: #cbd5e1;
 }
 
-.actionPhone {
+.actionPhone,
+.actionEmail {
   color: #7dd3fc;
   font-size: 1.05rem;
   font-weight: 700;
