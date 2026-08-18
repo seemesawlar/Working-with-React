@@ -115,10 +115,7 @@ const gallery = [
     src: "/images/ElementrenoFullView.png",
     alt: "Elementreno full renovation view",
   },
-  {
-    src: "/images/Elementrenokitchen2.png",
-    alt: "Modern kitchen renovation",
-  },
+
   {
     src: "/images/ElementrenoRoomsidew.png" ,
     alt: "Renovated interior room",
