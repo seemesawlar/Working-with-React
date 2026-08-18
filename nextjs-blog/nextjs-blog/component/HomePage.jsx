@@ -92,7 +92,7 @@ const gallery = [
     alt: "Custom Elementreno deck",
   },
   {
-    src: "/images/ElementrenoDeck2.webp",
+    src: "/images/ElementrenoDeck2 (1).webp",
     alt: "Custom outdoor deck",
   },
   {
