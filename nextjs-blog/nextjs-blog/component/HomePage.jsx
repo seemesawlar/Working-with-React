@@ -3,9 +3,8 @@ import Link from "next/link";
 import emailjs from "@emailjs/browser";
 import styles from "./HomePage.module.css";
 
-// Set these in .env.local (see .env.local.example) — get them from your
-// EmailJS dashboard at https://dashboard.emailjs.com/admin
-// The EmailJS template's "To email" field should be set to info@elementreno.ca
+
+// The EmailJS template's "To email" field is set to info@elementreno.ca
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
