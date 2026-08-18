@@ -7,11 +7,15 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@opennextjs/cloudflare": "^1.20.2",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.9.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.124.0"
   }
 }
