@@ -1,6 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
 import styles from "./HomePage.module.css";
+
+// Set these in .env.local (see .env.local.example) — get them from your
+// EmailJS dashboard at https://dashboard.emailjs.com/admin
+// The EmailJS template's "To email" field should be set to info@elementreno.ca
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 /* ── Data ── */
 const heroSlides = [
@@ -102,9 +110,10 @@ export default function HomePage() {
   const [heroIdx,     setHeroIdx]     = useState(0);
   const [prevHeroIdx, setPrevHeroIdx] = useState(null);
   const [testIdx,     setTestIdx]     = useState(0);
-  const [form,        setForm]        = useState({ name: "", phone: "", message: "" });
-  const [submitted,   setSubmitted]   = useState(false);
+  const [form,        setForm]        = useState({ name: "", email: "", phone: "", message: "" });
+  const [status,      setStatus]      = useState("idle"); // idle | sending | success | error
   const heroTimer = useRef(null);
+  const homeFormRef = useRef(null);
 
   useEffect(() => {
     heroTimer.current = setInterval(() => {
@@ -122,7 +131,36 @@ export default function HomePage() {
 
   function goSlide(i) { clearInterval(heroTimer.current); setPrevHeroIdx(heroIdx); setHeroIdx(i); }
   function handleChange(e) { setForm(p => ({ ...p, [e.target.name]: e.target.value })); }
-  function handleSubmit(e) { e.preventDefault(); setSubmitted(true); }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+    console.error(
+  "EmailJS is not configured. Set NEXT_PUBLIC_EMAILJS_SERVICE_ID, " +
+  "NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID, and NEXT_PUBLIC_EMAILJS_PUBLIC_KEY " +
+  "in .env.local."
+);
+      setStatus("error");
+      return;
+    }
+
+    setStatus("sending");
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        homeFormRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+      setStatus("success");
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setStatus("error");
+    }
+  }
 
   return (
     <div className={styles.page}>
@@ -297,15 +335,27 @@ export default function HomePage() {
             <div>
               <p className={styles.eyebrow}>Get in Touch</p>
               <h3 className={styles.formH}>Send us a message</h3>
-              {submitted ? (
+              {status === "success" ? (
                 <div className={styles.success} role="status">
                   ✓ Thanks! We'll be in touch within one business day.
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className={styles.form} noValidate>
+                <form ref={homeFormRef} onSubmit={handleSubmit} className={styles.form} noValidate>
+                  <input type="hidden" name="to_email" value="info@elementreno.ca" />
+                  <input type="hidden" name="form_source" value="Homepage Contact Form" />
+
+                  {status === "error" && (
+                    <div className={styles.formError} role="alert">
+                      ⚠ Something went wrong sending your message. Please try again, or call us directly at <a href="tel:+17809166652">(780) 916-6652</a>.
+                    </div>
+                  )}
+
                   <label htmlFor="hp-name" className={styles.lbl}>Your name</label>
                   <input id="hp-name" name="name" type="text" className={styles.inp}
                     placeholder="Jane Smith" value={form.name} onChange={handleChange} required />
+                  <label htmlFor="hp-email" className={styles.lbl}>Email address</label>
+                  <input id="hp-email" name="email" type="email" className={styles.inp}
+                    placeholder="jane@example.com" value={form.email} onChange={handleChange} required />
                   <label htmlFor="hp-phone" className={styles.lbl}>Phone number</label>
                   <input id="hp-phone" name="phone" type="tel" className={styles.inp}
                     placeholder="(780) 555-0100" value={form.phone} onChange={handleChange} required />
@@ -313,7 +363,9 @@ export default function HomePage() {
                   <textarea id="hp-msg" name="message" className={styles.txa} rows={4}
                     placeholder="Describe your project: basement finish, deck build, renovation, etc."
                     value={form.message} onChange={handleChange} required />
-                  <button type="submit" className={styles.btnBlock}>Send Message</button>
+                  <button type="submit" className={styles.btnBlock} disabled={status === "sending"}>
+                    {status === "sending" ? "Sending…" : "Send Message"}
+                  </button>
                 </form>
               )}
             </div>

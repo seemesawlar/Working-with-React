@@ -1,11 +1,13 @@
 import { useState, useRef } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import styles from "../styles/form.module.css";
 
-
-const EMAILJS_SERVICE_ID  = "service_xxxxxxx";
-const EMAILJS_TEMPLATE_ID = "template_xxxxxxx";
-const EMAILJS_PUBLIC_KEY  = "xxxxxxxxxxxxxxxxxxxx";
+// Set these in .env.local (see .env.local.example) — get them from your
+// EmailJS dashboard at https://dashboard.emailjs.com/admin
+// The EmailJS template's "To email" field should be set to info@elementreno.ca
+const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 const SOURCE_OPTIONS = [
   { value: "google",   label: "Google Search" },
@@ -154,6 +156,16 @@ export default function BasementForm() {
       return;
     }
 
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.error(
+        "EmailJS is not configured. Set NEXT_PUBLIC_EMAILJS_SERVICE_ID, " +
+        "NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID, and NEXT_PUBLIC_EMAILJS_PUBLIC_KEY " +
+        "in .env.local (see .env.local.example)."
+      );
+      setStatus("error");
+      return;
+    }
+
     setStatus("sending");
 
     try {
@@ -196,6 +208,8 @@ export default function BasementForm() {
       <p className={styles.subheading}>Tell us about your project and we'll follow up with a free, no-obligation estimate.</p>
 
       <form ref={formRef} onSubmit={handleSubmit} className={styles.form} noValidate>
+        <input type="hidden" name="to_email" value="info@elementreno.ca" />
+        <input type="hidden" name="form_source" value="Basement Development Quote Request" />
 
         {status === "error" && (
           <div className={styles.formError} role="alert">
@@ -339,7 +353,7 @@ export default function BasementForm() {
               <span className={styles.spinner} aria-hidden="true" />
               Sending request…
             </span>
-          ) : "Request a Free Quote (temporarily unavailable)Do Not Click Yet"}
+          ) : "Request a Free Quote"}
         </button>
 
       </form>

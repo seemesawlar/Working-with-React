@@ -118,7 +118,9 @@ export default function Faqs() {
 
       <section className={styles.section}>
         <div className={styles.faqIntro}>
-          <p className={styles.body}>Can't find the answer you're looking for? Call us directly at <a href="tel:+17809166652" className={styles.inlineLink}>(780) 916-6652</a> or <Link href="/contact" className={styles.inlineLink}>send us a message</Link>, we're happy to answer any question about your project.</p>
+<p className={styles.body}>
+  Can't find the answer you're looking for? Call us directly at <a href="tel:+17809166652" className={styles.inlineLink}>(780) 916-6652</a> or <a href="mailto:info@elementreno.ca" className={styles.inlineLink}>send us a message</a>, we're happy to answer any question about your project.
+</p>
         </div>
 
         {categories.map(cat => (

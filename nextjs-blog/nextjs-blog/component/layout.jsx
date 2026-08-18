@@ -26,8 +26,9 @@ export default function Layout({ children, fullBleed = false }) {
               <a href="tel:+17809166652" className={styles.topPhone}>+1 780-916-6652</a>
                 <a href="mailto:info@elementreno.ca" className={styles.topEmail}>info@elementreno.ca</a>
               <div className={styles.topSocial}>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.facebook.com/share/1CcJXTqhRQ/" target="_blank" rel="noopener noreferrer">Facebook</a>
                 <a href="https://youtu.be/NNhxmHvZ7Z0" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="https://www.instagram.com/elementrenovation?igsh=MThxbHZ5dzA4eDB0bQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
               </div>
             </div>
           </div>
