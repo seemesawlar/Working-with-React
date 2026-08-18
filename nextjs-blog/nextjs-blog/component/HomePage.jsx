@@ -24,7 +24,7 @@ const heroSlides = [
     sub: "Turn dark, unused space into a finished suite, home gym, or entertainment room your family will love.",
   },
   {
-    image: "https://images.unsplash.com/photo-1591972863054-cb79fcf96a04?w=1600&q=80",
+    image: "/images/completeDen.png",
     eyebrow: "Custom Deck Building",
     headline: "Outdoor Living\nBuilt to Impress",
     sub: "Wood, composite, multi-level, designed for your lifestyle and engineered for Edmonton winters.",
@@ -82,11 +82,63 @@ const whyUs = [
 ];
 
 const gallery = [
-  { src: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&q=75",  alt: "Finished basement living room",  span: true },
-  { src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=600&q=75", alt: "Custom outdoor deck" },
-  { src: "https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=600&q=75",  alt: "Modern kitchen renovation" },
-  { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=75", alt: "Basement home gym" },
-  { src: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=75", alt: "Multi-level deck with pergola" },
+  {
+    src: "/images/ElementrenoKitchen1.png",
+    alt: "Elementreno Kitchen renovation",
+    span: true,
+  },
+  {
+    src: "/images/ElementrenoDeck1.png",
+    alt: "Custom Elementreno deck",
+  },
+  {
+    src: "/images/ElementrenoDeck2.jpeg",
+    alt: "Custom outdoor deck",
+  },
+  {
+    src: "/images/ElementrenoDeck3.jpeg",
+    alt: "Outdoor deck renovation",
+  },
+  {
+    src: "/images/ElementrenoDeck4.jpeg",
+    alt: "Finished custom deck",
+  },
+  {
+    src: "/images/ElementrenoDeck5.png",
+    alt: "Custom deck project",
+  },
+  {
+    src: "/images/ElementrenoDeck6.png",
+    alt: "Completed deck renovation",
+  },
+  {
+    src: "/images/ElementrenoFullView.png",
+    alt: "Elementreno full renovation view",
+  },
+  {
+    src: "/images/ElementrenoKitchen2.png",
+    alt: "Modern kitchen renovation",
+  },
+  {
+    src: "/images/ElementrenoRoomsidew.png" ,
+    alt: "Renovated interior room",
+  },
+  {
+    src: "/images/ElementrenoWadrobe.png",
+    alt: "Custom wardrobe",
+  },
+  {
+    src: "/images/Elementrenowashroom.jpeg",
+    alt: "Bathroom renovation",
+  },
+  {
+    src: "/images/Elementrenowashroom1.png",
+    alt: "Finished bathroom renovation",
+  },
+  {
+    src: "/images/nextphoto1.jpg",
+    alt: "Elementreno renovation project",
+  },
 ];
 
 const testimonials = [
@@ -259,23 +311,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── GALLERY (light bg, constrained inner) ── */}
-      <section className={styles.lightSection} aria-labelledby="gal-title">
-        <div className={styles.wrap}>
-          <p className={styles.eyebrow}>Explore Possibilities</p>
-          <h2 id="gal-title" className={styles.h2}>See what's possible for your home</h2>
-          <div className={styles.galGrid}>
-            {gallery.map((img, i) => (
-              <div key={i} className={`${styles.galItem} ${img.span ? styles.galSpan : ""}`}>
-                <img src={img.src} alt={img.alt} className={styles.galImg} loading="lazy" />
-              </div>
-            ))}
-          </div>
-          <div className={styles.galCta}>
-            <Link href="/services" className={styles.btnPrimary}>Start Your Project</Link>
-          </div>
+     {/* ── GALLERY (light bg, constrained inner) ── */}
+<section className={styles.lightSection} aria-labelledby="gal-title">
+  <div className={styles.wrap}>
+
+    <p className={styles.eyebrow}>OUR WORK</p>
+
+    <h2 id="gal-title" className={styles.h2}>
+      Built by Element Reno
+    </h2>
+
+    <p className={styles.lead}>
+      Real projects. Real renovations. Every photo below is from work
+      completed / in-progress by our team for homeowners in Edmonton and surrounding
+      communities.
+    </p>
+
+    <div className={styles.galGrid}>
+      {gallery.map((img, i) => (
+        <div
+          key={i}
+          className={`${styles.galItem} ${
+            img.span ? styles.galSpan : ""
+          }`}
+        >
+          <img
+            src={img.src}
+            alt={img.alt}
+            className={styles.galImg}
+            loading="lazy"
+          />
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className={styles.galCta}>
+      <Link href="/services" className={styles.btnPrimary}>
+        Start Your Project
+      </Link>
+    </div>
+
+  </div>
+</section>
 
       {/* ── TESTIMONIALS (full-bleed dark) ── */}
       <section className={styles.darkSection} aria-labelledby="test-title">
