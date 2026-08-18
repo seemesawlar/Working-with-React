@@ -91,10 +91,10 @@ const gallery = [
     src: "/images/ElementrenoDeck1.webp",
     alt: "Custom Elementreno deck",
   },
-  {
-    src: "/images/ElementrenoDeck2 (1).webp",
-    alt: "Custom outdoor deck",
-  },
+ {
+  src: "/images/ElementrenoDeck2.webp",
+  alt: "Custom outdoor deck",
+},
   {
     src: "/images/ElementrenoDeck3.webp",
     alt: "Outdoor deck renovation",
