@@ -4386,7 +4386,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__17301wh._.js": {
-      "bytes": 104370,
+      "bytes": 104372,
       "imports": [
         {
           "path": "fs",
@@ -4579,7 +4579,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/require.js": {
-      "bytes": 108609,
+      "bytes": 108640,
       "imports": [
         {
           "path": "path",
@@ -7299,7 +7299,7 @@
           "bytesInOutput": 14322
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__17301wh._.js": {
-          "bytesInOutput": 108368
+          "bytesInOutput": 108370
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__03mfte8._.js": {
           "bytesInOutput": 14323
@@ -7326,7 +7326,7 @@
           "bytesInOutput": 334
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/require.js": {
-          "bytesInOutput": 102863
+          "bytesInOutput": 102894
         },
         ".open-next/server-functions/default/node_modules/next/dist/lib/wait.js": {
           "bytesInOutput": 341
@@ -7464,7 +7464,7 @@
           "bytesInOutput": 56798
         }
       },
-      "bytes": 2508124
+      "bytes": 2508157
     }
   }
 }
