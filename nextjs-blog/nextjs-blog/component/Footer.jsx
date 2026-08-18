@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className={styles.section}>
             <Link href="/" className={styles.logoLink}>
-              <img src="/images/Element Reno Logo.png" alt="Element Reno logo" className={styles.logoImage} />
+              <img src="/images/Element Reno Logo.webp" alt="Element Reno logo" className={styles.logoImage} />
             </Link>
           </div>
 

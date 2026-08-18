@@ -38,7 +38,7 @@ export default function Layout({ children, fullBleed = false }) {
           <div className={styles.navInner}>
             <div className={styles.brandRow}>
               <Link href="/" className={styles.brandLink}>
-                <img src="/images/Element Reno Logo.png" alt="Element Reno logo" className={styles.brandLogo} />
+                <img src="/images/Element Reno Logo.webp" alt="Element Reno logo" className={styles.brandLogo} />
               </Link>
             </div>
             <nav className={styles.nav} aria-label="Primary navigation">

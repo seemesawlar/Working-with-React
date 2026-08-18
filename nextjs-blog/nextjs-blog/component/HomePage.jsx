@@ -24,7 +24,7 @@ const heroSlides = [
     sub: "Turn dark, unused space into a finished suite, home gym, or entertainment room your family will love.",
   },
   {
-    image: "/images/completeDen.png",
+    image: "/images/completeDen.webp",
     eyebrow: "Custom Deck Building",
     headline: "Outdoor Living\nBuilt to Impress",
     sub: "Wood, composite, multi-level, designed for your lifestyle and engineered for Edmonton winters.",
@@ -83,57 +83,57 @@ const whyUs = [
 
 const gallery = [
   {
-    src: "/images/ElementrenoKitchen1.png",
+    src: "/images/ElementrenoKitchen1.webp",
     alt: "Elementreno Kitchen renovation",
     span: true,
   },
   {
-    src: "/images/ElementrenoDeck1.png",
+    src: "/images/ElementrenoDeck1.webp",
     alt: "Custom Elementreno deck",
   },
   {
-    src: "/images/ElementrenoDeck2.jpeg",
+    src: "/images/ElementrenoDeck2.webp",
     alt: "Custom outdoor deck",
   },
   {
-    src: "/images/ElementrenoDeck3.jpeg",
+    src: "/images/ElementrenoDeck3.webp",
     alt: "Outdoor deck renovation",
   },
   {
-    src: "/images/ElementrenoDeck4.jpeg",
+    src: "/images/ElementrenoDeck4.webp",
     alt: "Finished custom deck",
   },
   {
-    src: "/images/ElementrenoDeck5.png",
+    src: "/images/ElementrenoDeck5.webp",
     alt: "Custom deck project",
   },
   {
-    src: "/images/ElementrenoDeck6.png",
+    src: "/images/ElementrenoDeck6.webp",
     alt: "Completed deck renovation",
   },
   {
-    src: "/images/ElementrenoFullView.png",
+    src: "/images/ElementrenoFullView.webp",
     alt: "Elementreno full renovation view",
   },
 
   {
-    src: "/images/ElementrenoRoomsidew.png" ,
+    src: "/images/ElementrenoRoomsidew.webp" ,
     alt: "Renovated interior room",
   },
   {
-    src: "/images/ElementrenoWadrobe.png",
+    src: "/images/ElementrenoWadrobe.webp",
     alt: "Custom wardrobe",
   },
   {
-    src: "/images/Elementrenowashroom.jpeg",
+    src: "/images/Elementrenowashroom.webp",
     alt: "Bathroom renovation",
   },
   {
-    src: "/images/Elementrenowashroom1.png",
+    src: "/images/Elementrenowashroom1.webp",
     alt: "Finished bathroom renovation",
   },
   {
-    src: "/images/nextphoto1.jpg",
+    src: "/images/nextphoto1.webp",
     alt: "Elementreno renovation project",
   },
 ];
